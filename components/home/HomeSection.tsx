@@ -28,7 +28,6 @@ export function HomeSection() {
     return (
         <BackgroundLines className="flex items-center justify-center w-full flex-col px-2 min-h-screen">
             <div className="relative z-20">
-                {/* Existing Floating badges */}
                 <div className="hidden md:block absolute top-[-80px] left-[-60px] animate-float-slow">
                     <div className="px-3 py-1 bg-blue-500/20 backdrop-blur-sm rounded-full text-xs text-blue-200 border border-blue-500/30">
                         React
@@ -75,7 +74,6 @@ export function HomeSection() {
                     </div>
                 </div>
 
-                {/* New Floating badges */}
                 <div className="hidden md:block absolute top-[-20px] right-[60px] animate-float-slow">
                     <div className="px-3 py-1 bg-teal-500/20 backdrop-blur-sm rounded-full text-xs text-teal-200 border border-teal-500/30">
                         Express.js

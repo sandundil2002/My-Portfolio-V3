@@ -8,7 +8,7 @@ type NavItem = {
 };
 
 const navItems: NavItem[] = [
-    { label: 'Home', href: '/home' },
+    { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
     { label: 'Skills', href: '/skills' },
     { label: 'Projects', href: '/projects' },
@@ -48,7 +48,6 @@ export const Navbar = () => {
         )}>
             <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
                 <a
-                    href="/home"
                     className="text-2xl font-bold tracking-tight hover:opacity-90 transition-opacity"
                     aria-label="Logo"
                 >
