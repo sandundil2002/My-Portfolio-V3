@@ -84,7 +84,7 @@ export function HomeSection() {
                         PHP
                     </div>
                 </div>
-                <div className="hidden md:block absolute top-[80px] right-[-60px] animate-float-medium">
+                <div className="hidden md:block absolute top-[80px] right-[-100px] animate-float-medium">
                     <div className="px-3 py-1 bg-red-500/20 backdrop-blur-sm rounded-full text-xs text-red-200 border border-red-500/30">
                         Laravel
                     </div>
