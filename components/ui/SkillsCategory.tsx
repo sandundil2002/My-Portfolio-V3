@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import SkillItem, {Skill} from "./SkillItem";
+import SkillsItem, {Skill} from "./SkillsItem";
 
 type SkillCategoryProps = {
     title: string;
@@ -51,7 +51,7 @@ const SkillsCategory: React.FC<SkillCategoryProps> = ({ title, skills, isLoading
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
                 {skills.map((skill, index) => (
-                    <SkillItem key={index} {...skill} />
+                    <SkillsItem key={index} {...skill} />
                 ))}
             </div>
         </motion.div>
