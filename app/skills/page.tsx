@@ -39,6 +39,29 @@ export default function SkillsPage() {
         { name: "Django", icon: "🎓", proficiency: 60 },
     ]
 
+    const databasesNOthers: Skill[] = [
+        { name: "MySQL", icon: "🐬", proficiency: 90 },
+        { name: "MongoDB", icon: "🍃", proficiency: 88 },
+        { name: "Firebase", icon: "🔥", proficiency: 85 },
+        { name: "PostgreSQL", icon: "🐘", proficiency: 80 },
+        { name: "Docker", icon: "🐳", proficiency: 85 },
+        { name: "Kubernetes", icon: "🚢", proficiency: 70 },
+        { name: "CI/CD", icon: "🔄", proficiency: 80 },
+        { name: "JWT", icon: "🔑", proficiency: 90 },
+        { name: "Git", icon: "🔄", proficiency: 95 },
+        { name: "AWS", icon: "☁️", proficiency: 78 },
+        { name: "GraphQL", icon: "🔷", proficiency: 80 },
+        { name: "REST API", icon: "🔌", proficiency: 92 },
+        { name: "Ajax", icon: "🔄", proficiency: 85 },
+        { name: "Axios", icon: "🔄", proficiency: 85 },
+        { name: "Fetch API", icon: "🔗", proficiency: 85 },
+        { name: "Linux", icon: "🐧", proficiency: 85 },
+        { name: "Maven", icon: "📦", proficiency: 90 },
+        { name: "Gradle", icon: "📦", proficiency: 85 },
+        { name: "Postman", icon: "📬", proficiency: 90 },
+        { name: "Jira", icon: "📝", proficiency: 90 },
+    ]
+
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsLoading(false);
@@ -78,6 +101,12 @@ export default function SkillsPage() {
                     <SkillsCategory
                         title="Backend Languages & Frameworks"
                         skills={backendLanguagesNFrameworks}
+                        isLoading={isLoading}
+                    />
+
+                    <SkillsCategory
+                        title="Databases & Others"
+                        skills={databasesNOthers}
                         isLoading={isLoading}
                     />
                 </motion.div>

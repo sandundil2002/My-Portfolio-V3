@@ -7,7 +7,7 @@ type PageHeaderProps = {
 
 const PageHeader: React.FC<PageHeaderProps> = ({ sentence }) => {
     return (
-        <div className="flex flex-col items-center justify-center mt-6 mb-12">
+        <div className="flex flex-col items-center justify-center mt-4 mb-12">
             <Title
                 sentence={sentence}
                 manualMode={false}
