@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import React from "react";
 import {CardBody, CardContainer, CardItem} from "@/components/ui/3DCard";
@@ -26,8 +24,8 @@ export function ImageCard() {
                         src="/images/Pro pic.jpg"
                         height="1000"
                         width="1000"
-                        className="h-100 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-                        alt="thumbnail"
+                        className="lg:h-110 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                        alt="about me"
                     />
                 </CardItem>
             </CardBody>
