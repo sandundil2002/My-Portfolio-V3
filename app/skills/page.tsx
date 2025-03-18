@@ -26,6 +26,19 @@ export default function SkillsPage() {
         { name: "JQuery", icon: "🔌", proficiency: 80 },
     ];
 
+    const backendLanguagesNFrameworks: Skill[] = [
+        { name: "Java", icon: "☕", proficiency: 92 },
+        { name: "Node.js", icon: "🟢", proficiency: 85 },
+        { name: "Spring" , icon: "🍃", proficiency: 85 },
+        { name: "Spring Boot", icon: "🌱", proficiency: 90 },
+        { name: "Express.js", icon: "🚂", proficiency: 90 },
+        { name: "PHP", icon: "🔵", proficiency: 85 },
+        { name: "Laravel", icon: "🟥", proficiency: 80 },
+        { name: "Python", icon: "🐍", proficiency: 75 },
+        { name: "Flask", icon: "🍶", proficiency: 70 },
+        { name: "Django", icon: "🎓", proficiency: 60 },
+    ]
+
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsLoading(false);
@@ -59,6 +72,12 @@ export default function SkillsPage() {
                     <SkillsCategory
                         title="Frontend Languages & Frameworks"
                         skills={frontendLanguagesNFrameworks}
+                        isLoading={isLoading}
+                    />
+
+                    <SkillsCategory
+                        title="Backend Languages & Frameworks"
+                        skills={backendLanguagesNFrameworks}
                         isLoading={isLoading}
                     />
                 </motion.div>
