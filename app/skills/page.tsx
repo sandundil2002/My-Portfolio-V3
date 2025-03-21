@@ -12,6 +12,7 @@ type Skill = {
 
 export default function SkillsPage() {
     const [isLoading, setIsLoading] = useState(true);
+    const [activeTab, setActiveTab] = useState<"frontend" | "backend" | "databases">("frontend");
 
     const frontendLanguagesNFrameworks: Skill[] = [
         { name: "JavaScript", icon: "📒", proficiency: 95 },
@@ -29,7 +30,7 @@ export default function SkillsPage() {
     const backendLanguagesNFrameworks: Skill[] = [
         { name: "Java", icon: "☕", proficiency: 92 },
         { name: "Node.js", icon: "🟢", proficiency: 85 },
-        { name: "Spring" , icon: "🍃", proficiency: 85 },
+        { name: "Spring", icon: "🍃", proficiency: 85 },
         { name: "Spring Boot", icon: "🌱", proficiency: 90 },
         { name: "Express.js", icon: "🚂", proficiency: 90 },
         { name: "PHP", icon: "🔵", proficiency: 85 },
@@ -37,7 +38,7 @@ export default function SkillsPage() {
         { name: "Python", icon: "🐍", proficiency: 75 },
         { name: "Flask", icon: "🍶", proficiency: 70 },
         { name: "Django", icon: "🎓", proficiency: 60 },
-    ]
+    ];
 
     const databasesNOthers: Skill[] = [
         { name: "MySQL", icon: "🐬", proficiency: 90 },
@@ -60,7 +61,7 @@ export default function SkillsPage() {
         { name: "Gradle", icon: "📦", proficiency: 85 },
         { name: "Postman", icon: "📬", proficiency: 90 },
         { name: "Jira", icon: "📝", proficiency: 90 },
-    ]
+    ];
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -80,38 +81,77 @@ export default function SkillsPage() {
         },
     };
 
+    const categories = {
+        frontend: {
+            title: "Frontend Languages & Frameworks",
+            skills: frontendLanguagesNFrameworks,
+        },
+        backend: {
+            title: "Backend Languages & Frameworks",
+            skills: backendLanguagesNFrameworks,
+        },
+        databases: {
+            title: "Databases & Other Technologies",
+            skills: databasesNOthers,
+        },
+    };
+
     return (
-        <div className="min-h-screen bg-gray-900 text-white py-16 relative overflow-hidden">
+        <div className="min-h-screen bg-gray-900 text-white py-16 lg:px-10 relative overflow-hidden">
             <div className="container mx-auto px-4 relative z-10">
                 <PageHeader sentence="My Skills" />
 
+                {/* Navigation Tabs */}
+                <div className="flex flex-wrap justify-center gap-4 mt-8 px-4">
+                    <button
+                        onClick={() => setActiveTab("frontend")}
+                        className={`w-full sm:w-auto px-4 py-2 text-xs sm:text-sm md:text-base rounded-md font-semibold transition-colors duration-300 ${
+                            activeTab === "frontend"
+                                ? "bg-blue-600 text-white"
+                                : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+                        }`}
+                    >
+                        Frontend
+                    </button>
+                    <button
+                        onClick={() => setActiveTab("backend")}
+                        className={`w-full sm:w-auto px-4 py-2 text-xs sm:text-sm md:text-base rounded-md font-semibold transition-colors duration-300 ${
+                            activeTab === "backend"
+                                ? "bg-blue-600 text-white"
+                                : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+                        }`}
+                    >
+                        Backend
+                    </button>
+                    <button
+                        onClick={() => setActiveTab("databases")}
+                        className={`w-full sm:w-auto px-4 py-2 text-xs sm:text-sm md:text-base rounded-md font-semibold transition-colors duration-300 ${
+                            activeTab === "databases"
+                                ? "bg-blue-600 text-white"
+                                : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+                        }`}
+                    >
+                        Databases & Others
+                    </button>
+                </div>
+
+                {/* Skills Category Display */}
                 <motion.div
+                    key={activeTab}
                     variants={containerVariants}
                     initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
+                    animate="visible"
                     className="mt-12"
                 >
                     <SkillsCategory
-                        title="Frontend Languages & Frameworks"
-                        skills={frontendLanguagesNFrameworks}
-                        isLoading={isLoading}
-                    />
-
-                    <SkillsCategory
-                        title="Backend Languages & Frameworks"
-                        skills={backendLanguagesNFrameworks}
-                        isLoading={isLoading}
-                    />
-
-                    <SkillsCategory
-                        title="Databases & Others"
-                        skills={databasesNOthers}
+                        title={categories[activeTab].title}
+                        skills={categories[activeTab].skills}
                         isLoading={isLoading}
                     />
                 </motion.div>
             </div>
 
+            {/* Background Effects */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
                 <motion.div
                     animate={{

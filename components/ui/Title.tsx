@@ -85,7 +85,7 @@ const Tile: React.FC<TrueFocusProps> = ({
                     <span
                         key={index}
                         ref={(el) => { wordRefs.current[index] = el; }}
-                        className="relative text-[3rem] font-black cursor-pointer bg-clip-text text-transparent bg-gradient-to-b from-gray-200 to-blue-400"
+                        className="relative text-[2rem] sm:text-[2.5rem] lg:text-[3rem] font-black cursor-pointer bg-clip-text text-transparent bg-gradient-to-b from-gray-200 to-blue-400"
                         style={{
                             filter: isActive ? `blur(0px)` : `blur(${blurAmount}px)`,
                             transition: `filter ${animationDuration}s ease`,
