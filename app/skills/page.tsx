@@ -101,7 +101,6 @@ export default function SkillsPage() {
             <div className="container mx-auto px-4 relative z-10">
                 <PageHeader sentence="My Skills" />
 
-                {/* Navigation Tabs */}
                 <div className="flex flex-wrap justify-center gap-4 mt-8 px-4">
                     <button
                         onClick={() => setActiveTab("frontend")}
@@ -135,7 +134,6 @@ export default function SkillsPage() {
                     </button>
                 </div>
 
-                {/* Skills Category Display */}
                 <motion.div
                     key={activeTab}
                     variants={containerVariants}
@@ -151,7 +149,6 @@ export default function SkillsPage() {
                 </motion.div>
             </div>
 
-            {/* Background Effects */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
                 <motion.div
                     animate={{
