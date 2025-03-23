@@ -16,20 +16,20 @@ interface ProjectCardProps {
 
 export function ProjectCard({ projects }: ProjectCardProps) {
     return (
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 px-2 md:px-4">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 px-2 md:px-4">
             {projects.map((project, index) => (
                 <PinCard
                     key={index}
                     title={project.title}
                     href={project.href}
-                    containerClassName="bg-gradient-to-br rounded-lg mb-6 h-auto"
+                    containerClassName="bg-gradient-to-br rounded-lg h-auto"
                 >
                     <div className="flex basis-full flex-col p-2 md:p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-full h-full max-w-full">
-                        <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100 line-clamp-1">
+                        <h3 className="max-w-xs !pb-2 !m-0 font-bold text-lg text-slate-100 line-clamp-1">
                             {project.title}
                         </h3>
                         <div className="text-sm md:text-base !m-0 !p-0 font-normal">
-              <span className="text-slate-500 line-clamp-2 md:line-clamp-3">
+              <span className="text-slate-300 line-clamp-2 md:line-clamp-3">
                 {project.description}
               </span>
                         </div>
