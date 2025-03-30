@@ -2,6 +2,7 @@
 import {motion} from "framer-motion";
 import Tile from "@/components/ui/Title";
 import React from "react";
+import {BlogCard} from "@/components/blog/BlogCard";
 
 export default function BlogsPage() {
     return (
@@ -23,6 +24,8 @@ export default function BlogsPage() {
                         pauseBetweenAnimations={1}
                     />
                 </div>
+
+                <BlogCard />
             </motion.div>
         </div>
     );
