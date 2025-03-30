@@ -4,3 +4,18 @@
 body {
     background-color: #111827;
 }
+
+.socialContainer {
+    display: flex;
+    gap: 1rem; /* Space between icons */
+    justify-content: center;
+    padding: 1rem;
+}
+
+.socialContainer a {
+    transition: transform 0.2s ease-in-out;
+}
+
+.socialContainer a:hover {
+    transform: scale(1.1);
+}
