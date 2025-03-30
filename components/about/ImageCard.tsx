@@ -21,7 +21,7 @@ export function ImageCard() {
                 </CardItem>
                 <CardItem translateZ="100" className="w-full mt-4">
                     <Image
-                        src="/images/Pro pic.jpg"
+                        src="/images/pro-pic.jpg"
                         height="1000"
                         width="1000"
                         className="lg:h-110 w-full object-cover rounded-xl group-hover/card:shadow-xl"
