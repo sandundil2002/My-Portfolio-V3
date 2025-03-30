@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h1 align="center" id="title"><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Poppins&amp;weight=700&amp;size=60&amp;pause=1000&amp;center=true&amp;vCenter=true&amp;width=800&amp;height=65&amp;lines=My+Portfolio+V3" alt="Typing SVG"></a></h1>
 
-## Getting Started
+<p align="center"><img src="public/images/home.png" alt="project-image"></p>
 
-First, run the development server:
+<p id="description">A cutting-edge personal portfolio showcasing professional skills and projects, built with Next.js 15 and React 19. This dynamic web application features sophisticated animations powered by Framer Motion, including perspective transforms, 3D card effects, and subtle gradient overlays. The responsive interface uses Tailwind CSS v4 to deliver a polished experience across all devices. An interactive skills display organizes proficiencies across frontend, backend, and database technologies with animated progress indicators. The dark-themed design incorporates modern UI patterns with blue and purple accents, enhanced by a secure contact system integrated with Web3Forms API and hCaptcha protection. The architecture leverages Next.js App Router and Turbopack for optimal performance.</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+  
+  
+<h2>🧐 Features</h2>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Here're some of the project's best features:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+*   Modern Tech Stack: Built with Next.js 15 and React 19
+*   Responsive Design: Fully responsive layout using Tailwind CSS v4
+*   Animations: Smooth animations powered by Framer Motion
+*   Contact Form: Integrated with Web3Forms API and hCaptcha for secure form submissions
+*   Performance Optimized: Uses Next.js App Router and Turbopack for faster development
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+  
+  
+<h2>💻 Built with</h2>
 
-## Learn More
+Technologies used in the project:
 
-To learn more about Next.js, take a look at the following resources:
+*   Frontend: Next.js 15 React 19 TypeScript
+*   Styling: Tailwind CSS
+*   Animations: Framer Motion 12
+*   Form Handling: Web3Forms API with hCaptcha integration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<h2>🛡️ License:</h2>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License.
